@@ -21,7 +21,7 @@ ng generate component modules/todo-services/components/todo-card --module=module
 
 ##############################################################
 # Прикрепление URI к страницам роутера
-# Файл: "app.modules.ts"
+# Файл: "app.module.ts"
 ##############################################################
 ...
   imports: [
