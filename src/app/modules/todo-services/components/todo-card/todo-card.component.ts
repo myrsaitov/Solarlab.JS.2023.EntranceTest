@@ -13,4 +13,7 @@ export class TodoCardComponent {
     constructor( ) {
       }
 
+    ngOnInit() {
+    }
+
 }

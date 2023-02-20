@@ -1,16 +1,11 @@
-<!-- Карточка объявления (начало) -->
-<div class="card" style="width: 14rem;" *ngIf="todo">
-  
-    <div class="card-header"
-      style="width: 14rem; height: 7rem;">
-      <br>
-       
-        <!-- Заголовок -->
-        <h6 class="card-title font-weight-bold">
-          {{todo.title}}
-        </h6>
-  
+<div class="card" style="width: 2rem;" *ngIf="todo">
+
+    
+    <div class="card-body">
+        <h5 class="card-title">{{todo.title}}</h5>
+        <p class="card-text">{{todo.body}}</p>
+        <a [routerLink]="['/todos', todo.id]" class="btn btn-primary">Перейти</a>
     </div>
-  
-  </div>
-  <!-- Карточка объявления (конец) -->
+
+ 
+</div>
