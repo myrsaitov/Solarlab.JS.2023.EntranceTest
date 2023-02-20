@@ -1,29 +1,22 @@
 ##############################################################
-# Основные компоненты интерфейса
-# Вызываются в "app.component.html"
-#
-# Указать --module=my-module.module OR --skip-import
+# Модуль todo-list
 ##############################################################
-  ng generate component components/board-top-bar-account --module=app.module
-  ng generate component components/board-top-bar-main-menu --module=app.module
-  ng generate component components/board-top-bar-search --module=app.module
-  ng generate component components/board-left-column-categories --module=app.module
-  ng generate component components/board-right-column-tags --module=app.module
 
-##############################################################
-# Страницы роутера
-# https://onlinecode.org/how-to-create-routing-module-in-angular/
-# Каждый модуль нужно импортировать в "app-routing.module.ts"!
-##############################################################
-  
-  # Модуль доски объявлений
-    ng generate module pages/bulleting-board --routing
-  
-    # Главная страница
-    ng generate component pages/bulleting-board/main --module=bulleting-board.module
-  
-    # Просмотр объявления
-    ng generate component pages/bulleting-board/view --module=bulleting-board.module
+# Модуль 
+ng generate module modules/todo-services --module app --routing
+
+# Страницы
+ng generate component modules/todo-services/pages/list --module=modules/todo-services
+ng generate component modules/todo-services/pages/create --module=modules/todo-services
+ng generate component modules/todo-services/pages/edit --module=modules/todo-services
+ng generate component modules/todo-services/pages/view --module=modules/todo-services
+
+# Компоненты, применяемые на этих страницах
+ng generate component modules/components/todo-card --module=modules/todo-services
+
+
+
+
 
 
 ##############################################################
@@ -35,7 +28,7 @@
     BrowserModule,
     RouterModule.forRoot([
       { path: '', component: DashboardComponent },
-      { path: 'advertisements/:advertisementId', component: ViewComponent },
+      { path: 'folder/:id', component: ViewComponent },
     ])
   ],
 ...
