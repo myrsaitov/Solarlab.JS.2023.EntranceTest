@@ -1,0 +1,105 @@
+##############################################################
+#  Создание проекта с нуля
+##############################################################
+
+# Установить NodeJs
+  https://nodejs.org
+
+# Установить Angular
+  npm install --location=global @angular/cli
+
+# Создать новый проект
+  ng new front-app --routing --style=scss --directory ./
+
+# Добавить "NG-Zorro":
+  ng add ng-zorro-antd
+
+# Добавить в файл "tsconfig.json":
+
+  "compilerOptions": {
+    ...
+
+    // Чтобы не было проверки на обязательное инициализирование переменных
+    "forceConsistentCasingInFileNames": true,
+
+    // Чтобы не было строгой проверки типа аргумента
+    "strict": false,
+
+    ...
+  }
+
+# Добавить в файл ".gitignore":
+
+# IDE
+/.vscode
+/.idea
+/.angular
+
+##############################################################
+# Действия после клонирования
+##############################################################
+
+# Если нужно обновить все пакеты для существующего проекта в package.json
+  npm i -g npm-check-updates
+  npm fund
+  ncu -u
+
+# Установить пакеты
+  npm install
+
+# Если есть ошибка "fix the upstream dependency conflict or retry npm err..."
+  npm config set legacy-peer-deps true  
+
+# Добавить "NG-Zorro": 
+  ng add ng-zorro-antd
+
+# Если ошибка: "Так как выполнение сценариев отключено в этой системе. Для получения дополнительных сведений см..."
+  PowerShell Admin: Set-ExecutionPolicy RemoteSigned
+
+##############################################################
+# Полезные команды
+##############################################################
+
+# New component
+  ng generate component xyz
+
+# Angular Material
+  ng add @angular/material
+
+# Add PWA Support
+  ng add @angular/pwa
+  
+# Add Dependency
+  ng add _____
+
+# Run and watch tests
+  ng test
+
+# Build for production
+  ng build
+  
+##############################################################
+# Основные материалы для изучения
+##############################################################
+  
+# Angular
+  https://angular.io/tutorial
+  
+# CLI
+  https://angular.io/cli
+  
+# Material
+  https://material.angular.io/
+  
+# Blog
+  https://blog.angular.io/
+  
+# Devtools
+  https://angular.io/guide/devtools
+
+
+##############################################################
+# Полезные примеры
+##############################################################
+
+https://stackblitz.com/angular/gqgalmavnrd?file=src%2Fapp%2Fproduct-alerts%2Fproduct-alerts.component.ts
