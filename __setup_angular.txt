@@ -6,7 +6,7 @@
   https://nodejs.org
 
 # Установить Angular
-  npm install --location=global @angular/cli
+  npm install @angular/cli
 
 # Создать новый проект
   ng new front-app --routing --style=scss --directory ./
@@ -20,13 +20,23 @@
     ...
 
     // Чтобы не было проверки на обязательное инициализирование переменных
-    "forceConsistentCasingInFileNames": true,
-
+    "strictPropertyInitialization": false,
+    
     // Чтобы не было строгой проверки типа аргумента
     "strict": false,
 
     ...
   }
+
+
+
+
+# https://stackoverflow.com/questions/49699067/property-has-no-initializer-and-is-not-definitely-assigned-in-the-construc
+
+@Input() userId!: string;
+Now, the compiler understands that this variable, although not defined at compile time, shall be defined at run-time, and in time, before it is being used.
+
+
 
 # Добавить в файл ".gitignore":
 
