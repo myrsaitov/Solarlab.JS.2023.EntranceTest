@@ -12,7 +12,7 @@ ng generate component modules/todo-services/pages/edit --module=modules/todo-ser
 ng generate component modules/todo-services/pages/view --module=modules/todo-services
 
 # Компоненты, применяемые на этих страницах
-ng generate component modules/components/todo-card --module=modules/todo-services
+ng generate component modules/todo-services/components/todo-card --module=modules/todo-services
 
 
 
