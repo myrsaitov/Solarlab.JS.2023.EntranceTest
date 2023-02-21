@@ -31,10 +31,36 @@
 
 
 
+
+
+
+
+
+
 # https://stackoverflow.com/questions/49699067/property-has-no-initializer-and-is-not-definitely-assigned-in-the-construc
 
 @Input() userId!: string;
 Now, the compiler understands that this variable, although not defined at compile time, shall be defined at run-time, and in time, before it is being used.
+
+
+
+
+
+
+
+
+
+# Установка ngx-virtual-scroller
+npm config set legacy-peer-deps true
+npm i ngx-virtual-scroller
+
+
+
+
+
+
+
+
 
 
 

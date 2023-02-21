@@ -1,3 +1,4 @@
+<!--
 <div class="container">
     <h1 >Список дел</h1>
   </div>
@@ -8,3 +9,18 @@
         </div>
     </div>
 </div>
+-->
+
+<virtual-scroller #scroll [items]="todos"
+                  (vsUpdate)="onVsUpdate($event)"
+                  (vsChange)="onVsChange($event)"
+                  (vsStart)="onVsStart($event)"
+                  (vsEnd)="onVsEnd($event)"
+                  [style.height.px]="viewVirtualScrollerAreaHeight"
+                  [style.width.px]="viewVirtualScrollerAreaWidth">
+
+  <div *ngFor="let item of scroll.viewPortItems">
+    <app-todo-card [todo]="item"> </app-todo-card>
+  </div>
+
+</virtual-scroller>
