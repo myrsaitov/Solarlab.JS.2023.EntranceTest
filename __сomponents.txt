@@ -6,7 +6,10 @@
 ng generate module modules/todo-services --module app --routing
 
 # Страницы
-ng generate component modules/todo-services/pages/list --module=modules/todo-services
+ng generate component modules/todo-services/pages/list --module=modules/todo-
+ng generate component modules/todo-services/pages/list-in-work --module=modules/todo-services
+ng generate component modules/todo-services/pages/list-completed --module=modules/todo-services
+ng generate component modules/todo-services/pages/list-deleted --module=modules/todo-services
 ng generate component modules/todo-services/pages/create --module=modules/todo-services
 ng generate component modules/todo-services/pages/edit --module=modules/todo-services
 ng generate component modules/todo-services/pages/view --module=modules/todo-services

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="100"
+   height="100"
+   viewBox="0 0 100 100"
+   sodipodi:docname="status__in_work.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <rect
+       x="37.221494"
+       y="68.414155"
+       width="23.591088"
+       height="40.366972"
+       id="rect381" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="3.815"
+     inkscape:cx="14.678899"
+     inkscape:cy="55.307995"
+     inkscape:window-width="1920"
+     inkscape:window-height="924"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g8" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g8">
+    <ellipse
+       style="fill:#ff0000;stroke-width:1.23072"
+       id="path217"
+       cx="50.589779"
+       cy="50.851902"
+       rx="44.29882"
+       ry="43.250328" />
+    <text
+       xml:space="preserve"
+       style="fill:#000000"
+       x="48.49279"
+       y="49.27916"
+       id="text275"><tspan
+         sodipodi:role="line"
+         id="tspan273"
+         x="48.49279"
+         y="49.27916">!d</tspan></text>
+    <ellipse
+       style="fill:#000000"
+       id="path449"
+       cx="51.245087"
+       cy="78.899078"
+       rx="6.9462647"
+       ry="6.290957" />
+    <ellipse
+       style="fill:#000000;stroke-width:1.14087"
+       id="path451"
+       cx="50.065533"
+       cy="42.726082"
+       rx="10.747051"
+       ry="24.63958" />
+  </g>
+</svg>

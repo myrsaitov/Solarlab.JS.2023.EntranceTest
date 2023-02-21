@@ -1,23 +1,49 @@
 <!-- Карточка списка дел -->
-<div class="todo-card-component" [routerLink]="['/todos', todo.id]">
+<div 
+  class="todo-card-component"
+  [routerLink]="['/todos', todo.id]">
 
-  <!--
-  <a [routerLink]="['/todos', todo.id]" class="btn btn-primary">Перейти</a>
-  -->
+
   <!-- Первая строка карточки -->
 	<div class="card__first-row">
 
     <!-- Эмблема -->
 		<div class="first-row__first-column">
 			<span class="first-row__type">
-        <img style="filter: invert(51%) sepia(97%) saturate(362%) hue-rotate(116deg) brightness(87%) contrast(93%);" height="40" src="./../../../../../assets/holiday-solid.svg">
+
+        <!--Статус: в работе -->
+        <img
+          *ngIf="todo.status==0"
+          style="filter: invert(0%) sepia(0%) saturate(360%) hue-rotate(0deg) brightness(100%) contrast(100%);" 
+          height="40"
+          src="./../../../../../assets/status__in_work.svg">
+
+        <!--Статус: завершено -->
+        <img
+          *ngIf="todo.status==1"
+          style="filter: invert(51%) sepia(97%) saturate(360%) hue-rotate(116deg) brightness(87%) contrast(93%);" 
+          height="40"
+          src="./../../../../../assets/status__completed.svg">
+
+        <!--Статус: удалено -->
+        <img
+          *ngIf="todo.status==2"
+          style="filter: invert(51%) sepia(97%) saturate(360%) hue-rotate(216deg) brightness(87%) contrast(93%);" 
+          height="40"
+          src="./../../../../../assets/status__deleted.svg">
+
       </span>
+
 		</div>
 
     <!-- Кнопки редактирования и удаления -->
 		<span class="first-row__actions">
       <img class="actions__edit" height="20" src="./../../../../../assets/pencil-alt-solid.svg">
-      <img class="actions__delete" height="20" src="./../../../../../assets/trash-alt-solid.svg">
+      <img 
+        *ngIf="todo.status!=2"
+        class="actions__delete"
+        height="20"
+        src="./../../../../../assets/trash-alt-solid.svg">
 		</span>
 
 	</div>

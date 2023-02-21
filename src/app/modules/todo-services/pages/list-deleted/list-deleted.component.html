@@ -21,7 +21,7 @@
 
   <div *ngFor="let item of scroll.viewPortItems">
     <app-todo-card 
-      *ngIf="item.status!=2"
+      *ngIf="item.status==2"
       [todo]="item"></app-todo-card>
   </div>
 
