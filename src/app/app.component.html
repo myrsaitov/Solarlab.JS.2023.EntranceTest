@@ -63,7 +63,29 @@
                [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
             ></span>
         </span>
+
+        <!--Кнопка "Назад" -->
+        <img
+        title='Вернуться на предыдущую страницу'
+        style="filter: invert(0%) sepia(0%) saturate(360%) hue-rotate(0deg) brightness(100%) contrast(100%);" 
+        height="40"
+        src="./../assets/go_back.svg"
+        role="button" 
+        (click)="goBack()">
+
+        <!--Кнопка "Создать" -->
+        <img
+        [routerLink]="['/new']"
+        title='Создать новую запись'
+        style="filter: invert(0%) sepia(0%) saturate(360%) hue-rotate(0deg) brightness(100%) contrast(100%);" 
+        height="40"
+        src="./../assets/new.svg"
+        role="button">
+
       </div>
+
+
+
     </nz-header>
     <nz-content>
       <div class="inner-content">

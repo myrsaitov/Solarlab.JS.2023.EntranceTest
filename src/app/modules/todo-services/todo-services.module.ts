@@ -9,6 +9,7 @@ import {VirtualScrollerModule} from "ngx-virtual-scroller";
 import { ListInWorkComponent } from './pages/list-in-work/list-in-work.component';
 import { ListCompletedComponent } from './pages/list-completed/list-completed.component';
 import { ListDeletedComponent } from './pages/list-deleted/list-deleted.component';
+import { CreateComponent } from './pages/create/create.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ListDeletedComponent } from './pages/list-deleted/list-deleted.componen
     ViewComponent,
     ListInWorkComponent,
     ListCompletedComponent,
-    ListDeletedComponent
+    ListDeletedComponent,
+    CreateComponent
   ],
     imports: [
         CommonModule,

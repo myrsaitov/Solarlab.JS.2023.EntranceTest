@@ -1,22 +1,21 @@
-import { Component,OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {ITodo} from "../../models/todo/i-todo";
 import { ActivatedRoute } from '@angular/router';
 import { TodoService } from './../../services/todo.service';
-import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-view',
   templateUrl: './view.component.html',
   styleUrls: ['./view.component.scss']
 })
-export class ViewComponent implements OnInit {
+export class ViewComponent {
     id!: number;
     todo!: ITodo;
   
     constructor(
       public activatedRoute: ActivatedRoute,
-      public todoService: TodoService,
-      private location: Location
+      public todoService: TodoService
       ) { }
   
     ngOnInit() {
@@ -27,9 +26,7 @@ export class ViewComponent implements OnInit {
       });
     }
 
-    goBack() {
-      this.location.back();
-    }
+
 
   }
   

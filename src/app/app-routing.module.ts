@@ -5,6 +5,7 @@ import {ListInWorkComponent} from "./modules/todo-services/pages/list-in-work/li
 import {ListCompletedComponent} from "./modules/todo-services/pages/list-completed/list-completed.component";
 import {ListDeletedComponent} from "./modules/todo-services/pages/list-deleted/list-deleted.component";
 import {ViewComponent} from "./modules/todo-services/pages/view/view.component";
+import {CreateComponent} from "./modules/todo-services/pages/create/create.component";
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/all' },
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'in_work', component: ListInWorkComponent },
   { path: 'completed', component: ListCompletedComponent },
   { path: 'deleted', component: ListDeletedComponent },
-  { path: 'todos/:id', component: ViewComponent }
+  { path: 'todos/:id', component: ViewComponent },
+  { path: 'new', component: CreateComponent },
 
  // { path: 'welcome', loadChildren: () => import('./pages/welcome/welcome.module').then(m => m.WelcomeModule) }
 ];
