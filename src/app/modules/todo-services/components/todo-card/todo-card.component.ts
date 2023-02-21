@@ -10,10 +10,10 @@ export class TodoCardComponent {
 
     @Input() todo!: ITodo;
 
-    constructor( ) {
+    /*constructor( ) {
       }
 
     ngOnInit() {
-    }
+    }*/
 
 }
