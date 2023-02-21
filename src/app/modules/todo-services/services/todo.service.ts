@@ -8,8 +8,10 @@ import { TodoStatus } from '../enums/todo-status';
 })
 export class TodoService {
 
+  todoList!: ITodo[];
+
   // Фейковые данные
-  fakeTodoList: ITodo[] = JSON.parse(JSON.stringify([
+  fakeTodoList: string = JSON.stringify([
     {"id":1,"title":"Buy Oldsmobile","body":"posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor","status":0},
     {"id":2,"title":"Buy Jeep","body":"nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in","status":0},
     {"id":3,"title":"Sell Dodge","body":"sem duis aliquam convallis nunc proin at turpis a pede","status":0},
@@ -25,33 +27,46 @@ export class TodoService {
     {"id":13,"title":"Clean Chevrolet","body":"erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam","status":2},
     {"id":14,"title":"Sell Porsche","body":"nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan","status":0},
     {"id":15,"title":"Buy Land Rover","body":"nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac","status":0}
-  ]));
+  ]);
 
   constructor() { }
 
+  // Сохраняет данные
+  saveData() {
+    localStorage.setItem("datas", JSON.stringify(this.todoList));
+  }
+
+  // Загружает данные, если их нет, то фейковые
+  loadData() {
+    this.todoList = JSON.parse(localStorage.getItem("datas") || this.fakeTodoList);
+  }
+
   // Возвращает список Todo
   getTodoList() {
-    return of(this.fakeTodoList);
+    return of(this.todoList);
   }
 
   // Возвращает Todo по Id
   getTodoById(id: number) {
-    return of(this.fakeTodoList.find(item => item.id === id));
+    return of(this.todoList.find(item => item.id === id));
   }
 
   setTodoStatusCompleted(id: number){
-    let item = this.fakeTodoList?.find(item => item.id === id);
+    let item = this.todoList?.find(item => item.id === id);
     item!.status=TodoStatus.Completed;
+    this.saveData();
   }
 
   setTodoStatusInWork(id: number){
-    let item = this.fakeTodoList.find(item => item.id === id);
+    let item = this.todoList.find(item => item.id === id);
     item!.status=TodoStatus.InWork;
+    this.saveData();
   }
 
   setTodoStatusDeleted(id: number){
-    let item = this.fakeTodoList.find(item => item.id === id);
+    let item = this.todoList.find(item => item.id === id);
     item!.status=TodoStatus.Deleted;
+    this.saveData();
   }
 
 }
