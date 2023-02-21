@@ -18,7 +18,7 @@
   .card__first-row {
     width: 100%;
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 80% 20%;
   }
   
   .first-row__first-column {
@@ -43,7 +43,7 @@
   
   .first-row__actions {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 50% 50%;
     align-items: center;
     font-size: 1.2rem;
     color: #666;
