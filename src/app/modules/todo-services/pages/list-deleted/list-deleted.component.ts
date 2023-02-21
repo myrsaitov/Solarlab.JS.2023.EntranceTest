@@ -29,6 +29,8 @@ export class ListDeletedComponent {
             this.viewVirtualScrollerAreaHeight = window.innerHeight*this.k_height;
             this.viewVirtualScrollerAreaWidth = window.innerWidth*this.k_width;
     
+            this.todoService.loadData();
+
             this.todoService.getTodoList().subscribe(response => {
                 this.todos = response;
               })
