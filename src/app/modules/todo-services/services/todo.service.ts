@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ITodo } from '../models/todo/i-todo';
 import { of } from 'rxjs';
+import { TodoStatus } from '../enums/todo-status';
 
 @Injectable({
   providedIn: 'root'
@@ -36,6 +37,21 @@ export class TodoService {
   // Возвращает Todo по Id
   getTodoById(id: number) {
     return of(this.fakeTodoList.find(item => item.id === id));
+  }
+
+  setTodoStatusCompleted(id: number){
+    let item = this.fakeTodoList?.find(item => item.id === id);
+    item!.status=TodoStatus.Completed;
+  }
+
+  setTodoStatusInWork(id: number){
+    let item = this.fakeTodoList.find(item => item.id === id);
+    item!.status=TodoStatus.InWork;
+  }
+
+  setTodoStatusDeleted(id: number){
+    let item = this.fakeTodoList.find(item => item.id === id);
+    item!.status=TodoStatus.Deleted;
   }
 
 }

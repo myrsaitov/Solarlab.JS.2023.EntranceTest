@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import {ITodo} from "../../models/todo/i-todo";
+import {TodoService} from "../../services/todo.service";
 
 
 @Component({
@@ -11,10 +12,7 @@ export class TodoCardComponent {
 
     @Input() todo!: ITodo;
 
-    /*constructor( ) {
+    constructor(public readonly todoService: TodoService ) {
       }
-
-    ngOnInit() {
-    }*/
 
 }
