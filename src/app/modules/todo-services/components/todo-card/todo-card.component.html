@@ -14,7 +14,7 @@
         <img
           title='"В работе". Нажмите, чтобы изменить статус на "Завершено"'
           *ngIf="todo.status==0"
-          style="filter: invert(0%) sepia(0%) saturate(360%) hue-rotate(0deg) brightness(100%) contrast(100%);" 
+          style="filter: invert(0%) sepia(0%) saturate(360%) hue-rotate(120deg) brightness(100%) contrast(100%);" 
           height="40"
           src="./../../../../../assets/status__in_work.svg"
           role="button" 
@@ -78,7 +78,7 @@
     [routerLink]="['/todos', todo.id]">
 
 		<span class="second-row__text">
-      {{todo.title}} [id={{todo.id}}]
+      {{todo.title}}
     </span>
 
 	</div>
