@@ -109,3 +109,61 @@ nz-content {
   .actions__go_back:focus {
     outline: none;
   }
+
+
+  .actions__delete {
+    filter: invert(34%) sepia(0%) saturate(0%) hue-rotate(221deg) brightness(111%)
+      contrast(80%);
+  }
+  
+  .actions__delete:hover {
+    filter: invert(36%) sepia(63%) saturate(1308%) hue-rotate(321deg)
+      brightness(98%) contrast(91%);
+    transform: scale(1.1);
+  }
+  
+  .actions__delete:focus {
+    outline: none;
+  }
+  
+  .actions__all {
+    filter: invert(34%) sepia(0%) saturate(0%) hue-rotate(221deg) brightness(111%)
+      contrast(80%);
+  }
+  
+  .actions__all:hover {
+    filter: invert(36%) sepia(63%) saturate(1308%) hue-rotate(321deg)
+      brightness(98%) contrast(91%);
+    transform: scale(1.1);
+  }
+  
+  .actions__all:focus {
+    outline: none;
+  }
+
+  .actions__in_work {
+    filter: invert(34%) sepia(0%) saturate(0%) hue-rotate(221deg) brightness(111%)
+      contrast(80%);
+  }
+  
+  .actions__in_work:hover {
+    filter: invert(36%) sepia(63%) saturate(1308%) hue-rotate(321deg)
+      brightness(98%) contrast(91%);
+    transform: scale(1.1);
+  }
+  
+  .actions__in_work:focus {
+    outline: none;
+  }
+
+  .actions__completed {
+    filter: invert(34%) sepia(0%) saturate(0%) hue-rotate(221deg) brightness(111%)
+      contrast(80%);
+  }
+  
+  .actions__completed:hover {
+    filter: invert(36%) sepia(63%) saturate(1308%) hue-rotate(321deg)
+      brightness(98%) contrast(91%);
+    transform: scale(1.1);
+  }
+  

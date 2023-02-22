@@ -15,16 +15,36 @@
       <li nz-submenu nzOpen nzTitle="Статус" nzIcon="dashboard">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/all">Все дела</a>
+            <a routerLink="/all">
+                <img
+                title='Все дела'
+                class="actions__all"
+                height="40"
+                src="./../assets/all.svg">Все дела</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/in_work">В работе</a>
+            <a routerLink="/in_work">
+            <img
+            title='В работе'
+            class="actions__in_work"
+            height="40"
+            src="./../assets/status__in_work.svg">В работе</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/completed">Сделанные</a>
+            <a routerLink="/completed">
+                <img
+                title='Сделанные'
+                class="actions__completed"
+                height="40"
+                src="./../assets/status__completed.svg">Сделанные</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/deleted">Удаленные</a>
+            <a routerLink="/deleted">
+                <img
+                title='Удаленные'
+                class="actions__delete"
+                height="40"
+                src="./../assets/status__deleted.svg">Удаленные</a>
           </li>
         </ul>
       </li>
