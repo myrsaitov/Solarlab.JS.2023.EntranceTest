@@ -134,3 +134,17 @@
     text-overflow: ellipsis;
   }
   
+  .actions__save {
+    filter: invert(34%) sepia(0%) saturate(0%) hue-rotate(221deg) brightness(111%)
+      contrast(80%);
+  }
+  
+  .actions__save:hover {
+    filter: invert(74%) sepia(64%) saturate(873%) hue-rotate(324deg)
+      brightness(103%) contrast(94%);
+    transform: scale(1.1);
+  }
+  
+  .actions__save:focus {
+    outline: none;
+  }

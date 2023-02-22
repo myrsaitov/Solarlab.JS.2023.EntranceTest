@@ -50,20 +50,7 @@
     outline: none;
   }
   
-  .actions__suspend {
-    filter: invert(34%) sepia(0%) saturate(0%) hue-rotate(221deg) brightness(111%)
-      contrast(80%);
-  }
-  
-  .actions__suspend:hover {
-    filter: invert(74%) sepia(64%) saturate(873%) hue-rotate(324deg)
-      brightness(103%) contrast(94%);
-    transform: scale(1.1);
-  }
-  
-  .actions__suspend:focus {
-    outline: none;
-  }
+
   
   .actions__edit {
     filter: invert(34%) sepia(0%) saturate(0%) hue-rotate(221deg) brightness(111%)
@@ -96,6 +83,36 @@
     outline: none;
   }
   
+  .actions__in_work {
+    filter: invert(34%) sepia(0%) saturate(0%) hue-rotate(221deg) brightness(111%)
+      contrast(80%);
+  }
+  
+  .actions__in_work:hover {
+    filter: invert(36%) sepia(63%) saturate(1308%) hue-rotate(321deg)
+      brightness(98%) contrast(91%);
+    transform: scale(1.1);
+  }
+  
+  .actions__in_work:focus {
+    outline: none;
+  }
+
+  .actions__completed {
+    filter: invert(34%) sepia(0%) saturate(0%) hue-rotate(221deg) brightness(111%)
+      contrast(80%);
+  }
+  
+  .actions__completed:hover {
+    filter: invert(36%) sepia(63%) saturate(1308%) hue-rotate(321deg)
+      brightness(98%) contrast(91%);
+    transform: scale(1.1);
+  }
+  
+  .actions__completed:focus {
+    outline: none;
+  }
+
   .card__second-row {
     width: 100%;
     height: 100%;

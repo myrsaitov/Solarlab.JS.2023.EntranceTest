@@ -14,6 +14,7 @@
         <img
           title='"В работе". Нажмите, чтобы изменить статус на "Завершено"'
           *ngIf="todo.status==0"
+          class="actions__in_work"
           style="filter: invert(0%) sepia(0%) saturate(360%) hue-rotate(120deg) brightness(100%) contrast(100%);" 
           height="40"
           src="./../../../../../assets/status__in_work.svg"
@@ -24,6 +25,7 @@
         <img
           title='"Завершено". Нажмите, чтобы изменить статус на "В работе"'
           *ngIf="todo.status==1"
+          class="actions__completed"
           style="filter: invert(51%) sepia(97%) saturate(360%) hue-rotate(116deg) brightness(87%) contrast(93%);" 
           height="40"
           src="./../../../../../assets/status__completed.svg"
@@ -51,7 +53,7 @@
       <img
         title='Нажмите, чтобы отредактировать'
         *ngIf="todo.status!=2"
-        class="actions__edit" 
+        class="actions__edit"
         height="20" 
         src="./../../../../../assets/pencil-alt-solid.svg"
         role="button"
