@@ -37,6 +37,10 @@ export class EditComponent {
       this.todoService.getTodoById(this.id).subscribe(response => {
         this.todo = response as ITodo;
       });
+
+      this.title?.patchValue(this.todo.title);
+      this.body?.patchValue(this.todo.body);
+
     }
   
     // Возвращает значение c формы соответсвующего поля
@@ -52,17 +56,18 @@ export class EditComponent {
           //return;
         }
   
-      // Создает DTO объявления
-      const model: ITodo = {
-          id: this.todoService.getCount() + 2,
-          title: this.title?.value,
-          body: this.body?.value,
-          status: 0
-        };
-  
-      // Добавляет в список
-      this.todoService.pushTodo(model);
+      // Редактирует DTO объявления
+      this.todoService.getTodoById(this.id).subscribe(response => {
+        this.todo = response as ITodo;
+      });
+
+      this.todo.title = this.title?.value;
+      this.todo.body = this.body?.value;
+
+      // Сохраняет данные
+      this.todoService.saveData();
       this.router.navigate(['/']);
+      
     }
   }
   
