@@ -4,16 +4,16 @@
     
       <!-- Первая строка карточки -->
         <div class="card__first-row">
-    
+            <h1>Редактирование записи:</h1>
         </div>
     
       <!-- Вторая строка карточки -->
         <div class="card__second-row">
     
             <!-- Название -->
-            <div><h1>Редактирование записи: </h1></div>
             <div class="form-group">
                 <input type="text"
+                    size="100%"
                     class="form-control"
                     id="title"
                     formControlName="title"
@@ -38,19 +38,21 @@
                     autofocus
                     [class.is-invalid]="body.invalid"
                     rows="8"
-                    cols="120">
+                    cols="100">
                 </textarea>
             </div>
     
         </div>
     
-        <!-- Кнопка "Добавить"-->
-        <button type="submit"
-          class="btn btn-primary mr-2"
-          (click)="submit()">
-          Сохранить
-        </button>
-    
+   
+    <!-- Кнопка "Сохранить" -->
+    <img 
+      title='Нажмите, чтобы сохранить запись'
+      class="actions__save"
+      height="40"
+      src="./../../../../../assets/save.svg"
+      role="button" 
+      (click)="submit()">
     
     </div>
     </ng-container>
