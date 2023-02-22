@@ -11,6 +11,7 @@ import { ListCompletedComponent } from './pages/list-completed/list-completed.co
 import { ListDeletedComponent } from './pages/list-deleted/list-deleted.component';
 import { CreateComponent } from './pages/create/create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditComponent } from './pages/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ListInWorkComponent,
     ListCompletedComponent,
     ListDeletedComponent,
-    CreateComponent
+    CreateComponent,
+    EditComponent
   ],
     imports: [
         CommonModule,
