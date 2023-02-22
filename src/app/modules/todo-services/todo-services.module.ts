@@ -10,7 +10,7 @@ import { ListInWorkComponent } from './pages/list-in-work/list-in-work.component
 import { ListCompletedComponent } from './pages/list-completed/list-completed.component';
 import { ListDeletedComponent } from './pages/list-deleted/list-deleted.component';
 import { CreateComponent } from './pages/create/create.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,9 @@ import { CreateComponent } from './pages/create/create.component';
     imports: [
         CommonModule,
         TodoServicesRoutingModule,
-        VirtualScrollerModule
+        VirtualScrollerModule,
+        FormsModule,
+        ReactiveFormsModule
     ]
 })
 export class TodoServicesModule { }

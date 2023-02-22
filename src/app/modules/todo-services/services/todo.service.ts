@@ -31,6 +31,17 @@ export class TodoService {
 
   constructor() { }
 
+  // Возвращает количество объявлений
+  pushTodo(todo: ITodo){
+    this.todoList.push(todo);
+    this.saveData();
+  }
+
+  // Возвращает количество объявлений
+  getCount(){
+    return this.todoList.length;
+  }
+
   // Сохраняет данные
   saveData() {
     localStorage.setItem("datas", JSON.stringify(this.todoList));

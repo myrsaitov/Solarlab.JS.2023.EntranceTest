@@ -1,9 +1,9 @@
-import { Component,OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {ITodo} from "../../models/todo/i-todo";
 import { ActivatedRoute } from '@angular/router';
 import { TodoService } from './../../services/todo.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { TodoStatus } from '../../enums/todo-status';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create',
@@ -14,11 +14,13 @@ export class CreateComponent {
   id!: number;
   todo!: ITodo;
   form!: FormGroup;
+ // formData: FormData = new FormData();
 
   constructor(
     public readonly fb: FormBuilder,
     public activatedRoute: ActivatedRoute,
-    public todoService: TodoService
+    public todoService: TodoService,
+    private readonly router: Router
     ) { }
 
   ngOnInit() {
@@ -46,16 +48,19 @@ export class CreateComponent {
 
     // Если форма неправильно заполнена
     if (this.form.invalid) {
-        return;
+        //return;
       }
 
     // Создает DTO объявления
-    const model: Partial<ITodo> = {
+    const model: ITodo = {
+        id: this.todoService.getCount() + 2,
         title: this.title?.value,
         body: this.body?.value,
-        status: TodoStatus.InWork
+        status: 0
       };
 
-
+    // Добавляет в список
+    this.todoService.pushTodo(model);
+    this.router.navigate(['/']);
   }
 }

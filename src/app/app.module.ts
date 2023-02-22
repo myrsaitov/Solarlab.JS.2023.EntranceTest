@@ -10,7 +10,7 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { ru_RU } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import ru from '@angular/common/locales/ru';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IconsProviderModule } from './icons-provider.module';
@@ -31,6 +31,7 @@ registerLocaleData(ru);
     AppRoutingModule,
     TodoServicesModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     IconsProviderModule,
