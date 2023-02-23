@@ -12,6 +12,7 @@ import { ListDeletedComponent } from './pages/list-deleted/list-deleted.componen
 import { CreateComponent } from './pages/create/create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditComponent } from './pages/edit/edit.component';
+import { StatusFilterPipe } from './pipes/status-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { EditComponent } from './pages/edit/edit.component';
     ListCompletedComponent,
     ListDeletedComponent,
     CreateComponent,
-    EditComponent
+    EditComponent,
+    StatusFilterPipe
   ],
     imports: [
         CommonModule,
