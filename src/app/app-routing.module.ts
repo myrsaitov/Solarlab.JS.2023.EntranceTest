@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {ListComponent} from "./modules/todo-services/pages/list/list.component";
-import {ListInWorkComponent} from "./modules/todo-services/pages/list-in-work/list-in-work.component";
-import {ListCompletedComponent} from "./modules/todo-services/pages/list-completed/list-completed.component";
-import {ListDeletedComponent} from "./modules/todo-services/pages/list-deleted/list-deleted.component";
 import {ViewComponent} from "./modules/todo-services/pages/view/view.component";
 import {CreateComponent} from "./modules/todo-services/pages/create/create.component";
 import {EditComponent} from "./modules/todo-services/pages/edit/edit.component";
