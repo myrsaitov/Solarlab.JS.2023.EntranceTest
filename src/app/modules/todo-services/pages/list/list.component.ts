@@ -1,7 +1,6 @@
 import { ITodo } from './../../models/todo/i-todo';
 import { TodoService } from './../../services/todo.service';
 import {ChangeDetectorRef, Component, HostListener, ViewChild} from '@angular/core';
-import {VirtualScrollerComponent} from "ngx-virtual-scroller";
 import { TodoStatus } from '../../enums/todo-status';
 import { Router } from '@angular/router';
 
@@ -24,8 +23,7 @@ export class ListComponent {
       
           todos!: ITodo[];
       
-          @ViewChild('scroll') scroller: VirtualScrollerComponent | undefined;
-      
+   
           constructor(
             private cd: ChangeDetectorRef,
             private todoService: TodoService,
