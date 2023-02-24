@@ -5,6 +5,7 @@ import { TodoService } from './../../services/todo.service';
 import { ListRoutingModule } from './list-routing.module';
 import { ListComponent } from './list.component';
 import { TodoCardComponent } from './../../components/todo-card/todo-card.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,6 +15,8 @@ import { TodoCardComponent } from './../../components/todo-card/todo-card.compon
     StatusFilterPipe
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     ListRoutingModule
   ],

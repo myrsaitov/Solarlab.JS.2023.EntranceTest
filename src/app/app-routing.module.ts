@@ -8,15 +8,9 @@ const routes: Routes = [
   { path: 'in_work', loadChildren: () => import('./modules/todo-services/pages/list/list.module').then(m => m.ListModule) },
   { path: 'completed', loadChildren: () => import('./modules/todo-services/pages/list/list.module').then(m => m.ListModule) },
   { path: 'deleted', loadChildren: () => import('./modules/todo-services/pages/list/list.module').then(m => m.ListModule) },
-
-  //{ path: 'all', component: ListComponent },
-  //{ path: 'in_work', component: ListComponent },
-  //{ path: 'completed', component: ListComponent },
-  //{ path: 'deleted', component: ListComponent },
-  //{ path: 'todos/:id', component: ViewComponent },
-  //{ path: 'new', component: CreateComponent },
-  //{ path: 'edit/:id', component: EditComponent },
- // { path: 'welcome', loadChildren: () => import('./pages/welcome/welcome.module').then(m => m.WelcomeModule) }
+  { path: 'todos/:id', loadChildren: () => import('./modules/todo-services/pages/view/view.module').then(m => m.ViewModule) },
+  { path: 'new', loadChildren: () => import('./modules/todo-services/pages/create/create.module').then(m => m.CreateModule) },
+  { path: 'edit/:id', loadChildren: () => import('./modules/todo-services/pages/edit/edit.module').then(m => m.EditModule) }
 ];
 
 @NgModule({
