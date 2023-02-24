@@ -5,7 +5,7 @@ import { ITodo } from '../models/todo/i-todo';
 // https://embed.plnkr.co/l1oTNT/
 
 @Pipe({
-    name: 'myfilter',
+    name: 'statusfilter',
     pure: false
 })
 export class StatusFilterPipe implements PipeTransform {

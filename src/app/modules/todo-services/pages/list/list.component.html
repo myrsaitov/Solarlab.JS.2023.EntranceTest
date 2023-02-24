@@ -2,7 +2,8 @@
 https://stackblitz.com/edit/nz-virtual-scroll-index-issue?file=src%2Fapp%2Fapp.component.ts
 -->
 
-<div *ngFor="let item of todos | myfilter:filterargs">
-  <app-todo-card 
-    [todo]="item"></app-todo-card>
-</div>
+<div *ngFor="let item of todos | statusfilter:filterargs">
+    <app-todo-card 
+      [todo]="item"></app-todo-card>
+  </div>
+  

@@ -2,20 +2,19 @@
 # Модуль todo-list
 ##############################################################
 
-# Модуль 
+# Модуль Todo
 ng generate module modules/todo-services --module app --routing
 
 # Страницы
-ng generate component modules/todo-services/pages/list --module=modules/todo-
-ng generate component modules/todo-services/pages/list-in-work --module=modules/todo-services
-ng generate component modules/todo-services/pages/list-completed --module=modules/todo-services
-ng generate component modules/todo-services/pages/list-deleted --module=modules/todo-services
+ng generate module modules/todo-services/pages/list --module modules/todo-services --routing
+ng generate component modules/todo-services/pages/list --module=modules/todo-services/pages/list
+ng generate component modules/todo-services/components/todo-card --module=modules/todo-services/pages/list
+
 ng generate component modules/todo-services/pages/create --module=modules/todo-services
 ng generate component modules/todo-services/pages/edit --module=modules/todo-services
 ng generate component modules/todo-services/pages/view --module=modules/todo-services
 
-# Компоненты, применяемые на этих страницах
-ng generate component modules/todo-services/components/todo-card --module=modules/todo-services
+
 
 
 
