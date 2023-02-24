@@ -3,7 +3,7 @@
 ##############################################################
 
 # Модуль Todo
-ng generate module modules/todo-services --module app --routing
+ng generate module modules/todo-services --module app
 
 # Страницы
 ng generate module modules/todo-services/pages/list --module modules/todo-services --routing
