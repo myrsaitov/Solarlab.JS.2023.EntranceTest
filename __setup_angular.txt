@@ -28,29 +28,13 @@
     ...
   }
 
-
-
-
-
-
-
-
-
-
-# https://stackoverflow.com/questions/49699067/property-has-no-initializer-and-is-not-definitely-assigned-in-the-construc
-
-@Input() userId!: string;
-Now, the compiler understands that this variable, although not defined at compile time, shall be defined at run-time, and in time, before it is being used.
-
-
-
-
 # Добавить в файл ".gitignore":
 
 # IDE
 /.vscode
 /.idea
 /.angular
+
 
 ##############################################################
 # Действия после клонирования
@@ -67,11 +51,9 @@ Now, the compiler understands that this variable, although not defined at compil
 # Если есть ошибка "fix the upstream dependency conflict or retry npm err..."
   npm config set legacy-peer-deps true  
 
-# Добавить "NG-Zorro": 
-  ng add ng-zorro-antd
-
 # Если ошибка: "Так как выполнение сценариев отключено в этой системе. Для получения дополнительных сведений см..."
   PowerShell Admin: Set-ExecutionPolicy RemoteSigned
+
 
 ##############################################################
 # Полезные команды
@@ -94,7 +76,8 @@ Now, the compiler understands that this variable, although not defined at compil
 
 # Build for production
   ng build
-  
+
+
 ##############################################################
 # Основные материалы для изучения
 ##############################################################
