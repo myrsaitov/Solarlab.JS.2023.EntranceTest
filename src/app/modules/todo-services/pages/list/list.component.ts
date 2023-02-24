@@ -4,6 +4,7 @@ import {ChangeDetectorRef, Component, HostListener, ViewChild} from '@angular/co
 import { TodoStatus } from '../../enums/todo-status';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',

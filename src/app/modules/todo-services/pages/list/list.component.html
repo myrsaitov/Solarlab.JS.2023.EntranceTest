@@ -1,9 +1,28 @@
 <!--
 https://stackblitz.com/edit/nz-virtual-scroll-index-issue?file=src%2Fapp%2Fapp.component.ts
--->
+
 
 <div *ngFor="let item of todos | statusfilter:filterargs">
     <app-todo-card 
       [todo]="item"></app-todo-card>
-  </div>
+  </div>-->
   
+
+
+  <nz-table
+  #virtualTable
+  nzVirtualScroll
+  [nzData]="todos | statusfilter:filterargs"
+  [nzFrontPagination]="false"
+  [nzShowPagination]="false"
+  [nzScroll]="{ x: '900px', y: '500px' }"
+>
+  <tbody>
+    <ng-template nz-virtual-scroll let-todos let-index="index">
+      <tr>
+        <app-todo-card 
+        [todo]="todos"></app-todo-card>
+      </tr>
+    </ng-template>
+  </tbody>
+</nz-table>
