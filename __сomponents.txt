@@ -10,9 +10,14 @@ ng generate module modules/todo-services/pages/list --module modules/todo-servic
 ng generate component modules/todo-services/pages/list --module=modules/todo-services/pages/list
 ng generate component modules/todo-services/components/todo-card --module=modules/todo-services/pages/list
 
-ng generate component modules/todo-services/pages/create --module=modules/todo-services
-ng generate component modules/todo-services/pages/edit --module=modules/todo-services
-ng generate component modules/todo-services/pages/view --module=modules/todo-services
+ng generate module modules/todo-services/pages/create --module modules/todo-services --routing
+ng generate component modules/todo-services/pages/create --module=modules/todo-services/pages/create
+
+ng generate module modules/todo-services/pages/edit --module modules/todo-services --routing
+ng generate component modules/todo-services/pages/edit --module=modules/todo-services/pages/edit
+
+ng generate module modules/todo-services/pages/view --module modules/todo-services --routing
+ng generate component modules/todo-services/pages/view --module=modules/todo-services/pages/view
 
 
 

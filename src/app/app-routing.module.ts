@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {ViewComponent} from "./modules/todo-services/pages/view/view.component";
-import {CreateComponent} from "./modules/todo-services/pages/create/create.component";
-import {EditComponent} from "./modules/todo-services/pages/edit/edit.component";
+
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/all' },
   { path: 'all', loadChildren: () => import('./modules/todo-services/pages/list/list.module').then(m => m.ListModule) },
+  { path: 'in_work', loadChildren: () => import('./modules/todo-services/pages/list/list.module').then(m => m.ListModule) },
+  { path: 'completed', loadChildren: () => import('./modules/todo-services/pages/list/list.module').then(m => m.ListModule) },
+  { path: 'deleted', loadChildren: () => import('./modules/todo-services/pages/list/list.module').then(m => m.ListModule) },
 
   //{ path: 'all', component: ListComponent },
   //{ path: 'in_work', component: ListComponent },

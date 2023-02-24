@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StatusFilterPipe } from './../../pipes/status-filter.pipe';
+import { TodoService } from './../../services/todo.service';
 import { ListRoutingModule } from './list-routing.module';
 import { ListComponent } from './list.component';
 import { TodoCardComponent } from './../../components/todo-card/todo-card.component';
@@ -16,6 +17,7 @@ import { TodoCardComponent } from './../../components/todo-card/todo-card.compon
     CommonModule,
     ListRoutingModule
   ],
-  exports: [ListComponent]
+  exports: [ListComponent],
+  providers: [TodoService]
 })
 export class ListModule { }

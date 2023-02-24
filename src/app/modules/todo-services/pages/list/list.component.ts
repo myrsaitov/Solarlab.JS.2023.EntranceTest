@@ -51,7 +51,7 @@ export class ListComponent {
             else if (this.router.url === '/completed')
             {
               this.filterargs = [
-                TodoStatus.InWork
+                TodoStatus.Completed
               ];
             }
             else if (this.router.url === '/deleted')
