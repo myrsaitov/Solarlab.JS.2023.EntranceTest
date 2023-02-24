@@ -45,25 +45,6 @@ Now, the compiler understands that this variable, although not defined at compil
 
 
 
-
-
-
-
-
-# Установка ngx-virtual-scroller
-npm config set legacy-peer-deps true
-npm i ngx-virtual-scroller
-
-
-
-
-
-
-
-
-
-
-
 # Добавить в файл ".gitignore":
 
 # IDE
